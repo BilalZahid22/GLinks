@@ -187,12 +187,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -360,22 +354,11 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="jquery.js" />
-    <Content Include="obj\Debug\WebProject.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\WebProject.dll" />
-    <Content Include="obj\Debug\WebProject.pdb" />
-    <Content Include="obj\Release\WebProject.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Release\WebProject.dll" />
-    <Content Include="obj\Release\WebProject.pdb" />
     <Content Include="pause.png" />
     <Content Include="play.png" />
     <Content Include="script.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="obj\Debug\CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\WebProject.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Release\CoreCompileInputs.cache" />
-    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Content\fonts\BebasNeue-webfont.eot" />
     <Content Include="Content\fonts\BebasNeue-webfont.ttf" />
     <Content Include="Content\fonts\BebasNeue-webfont.woff" />
@@ -520,8 +503,6 @@
     <Folder Include="Content\css\" />
     <Folder Include="Content\js\" />
     <Folder Include="Content\scss\" />
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="obj\Release\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
