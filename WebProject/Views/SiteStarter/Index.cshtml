@@ -1,0 +1,154 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<CRUD.game>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>GamePortal</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all" />
+    <!--[if IE 6]><link rel="stylesheet" href="css/ie6-style.css" type="text/css" media="all" /><![endif]-->
+    <script src="~/Content/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/fns.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="page" class="shell">
+        <!-- Header -->
+
+        @{Html.RenderPartial("header"); }
+        <!-- / Header -->
+        <!-- Main -->
+        <div id="main">
+            <div id="main-bot">
+                <div class="cl">&nbsp;</div>
+                <!-- Content -->
+                <div id="content">
+                    <div class="block">
+                    </div>
+                    <div class="block">
+
+                    </div>
+                    <div class="block">
+                        <div class="block-bot">
+                            <div class="head">
+                                <div class="head-cnt">
+                                    <h3></h3>
+                                    <div class="cl">&nbsp;</div>
+                                </div>
+
+                            </div>
+                            @foreach (CRUD.game x in Model)
+                            {
+
+                                <div class="row-articles articles">
+                                    <div class="cl">&nbsp;</div>
+
+
+                                    <div class="article last-article">
+                                        <div class="cl">&nbsp;</div>
+                                        <div class="image"> <a href="http://abc.com"><img src="@Url.Content(x.Image)" alt="" /> </a> </div>
+                                        <div class="cnt">
+                                            <h4> @Html.ActionLink(@x.G_name, "GameDetail", "SiteStarter", new { nam = x.G_name }, null) @*<a href="@Url.Action("~/Views/SiteStarter/GameDetail.cshtml")">@x.G_name</a>*@ </h4>
+                                            <h3> Click to Game name to go to Download Page</h3>
+                                        </div>
+                                        <div class="cl">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="cl">&nbsp;</div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+                <!-- / Content -->
+                <!--  -->
+                <div id="sidebar">
+
+                    <div id="search" class="block">
+                        <div class="block-bot">
+                            <div class="block-cnt" style="margin-top: 15px">
+                                <form action="~/SiteStarter/Search" method="post" style="margin-top: 5px;margin-bottom: 25px">
+                                    <div class="cl">&nbsp;</div>
+                                    <div class="fieldplace">
+                                        <input type="text" class="field" placeholder="Search" name="Search" />
+                                    </div>
+                                    <input type="submit" class="button" value="GO" />
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Search -->
+                    <!-- Sign In -->
+                    <div id="sign" class="block">
+                        <div class="block-bot">
+                            <div class="block-cnt">
+                                <div class="cl">&nbsp;</div>
+
+                                @if (ViewBag.UserName == null)
+                                {
+                                    <div class="button button-left" style="margin-left: 3px">@Html.ActionLink("Sign In", "LogSign")</div>
+                                    <div class="button button-right">@Html.ActionLink("Sign Up", "LogSign")</div>
+                                }
+                                else
+                                {
+                                    <h2>
+                                        @(ViewBag.UserName)
+                                    </h2>
+                                    <div class="button button-left" style="margin-left: 3px;margin-top: 5px">@Html.ActionLink("Log Out", "SignOut");</div>
+                                }
+                                <div class="cl">&nbsp;</div>
+                                <div class="cl">&nbsp;</div>
+                                <div class="cl">&nbsp;</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Sign In -->
+                    <div class="block">
+                        <div class="block-bot">
+                            <div class="head">
+                                <div class="head-cnt">
+                                    <h3>New Games</h3>
+                                </div>
+                            </div>
+                            <div class="image-articles articles">
+                                <div class="cl">&nbsp;</div>
+                                @if (Model.Count > 0)
+                                {
+                                    <div class="article">
+                                        <div class="cl">&nbsp;</div>
+                                        <img src="@Url.Content(Model[0].Image)" width="200" height="150" alt="" />
+                                        <div class="cnt">
+                                            <h4>@Html.ActionLink(Model[0].G_name, "GameDetail", "SiteStarter", new { nam = Model[0].G_name }, null)</h4>
+
+                                        </div>
+                                        <div class="cl">&nbsp;</div>
+                                    </div>
+                                }
+
+                                <div class="cl">&nbsp;</div>
+                                <a href="#" class="view-all">&nbsp;</a>
+                                <div class="cl">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- / Sidebar -->
+                <div class="cl">&nbsp;</div>
+                <!-- Footer -->
+                @{Html.RenderPartial("footer");}
+                <!-- / Footer -->
+            </div>
+        </div>
+        <!-- / Main -->
+    </div>
+</body>
+</html>
