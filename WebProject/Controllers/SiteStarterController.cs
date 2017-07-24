@@ -97,7 +97,7 @@ namespace WebProject.Controllers
                     rt = "~/SiteStarter/LogSign";
                 }
             }
-            return Redirect(rt);
+            return Redirect(Url.Content(rt));
         }
         public ActionResult LogSign()
         {
